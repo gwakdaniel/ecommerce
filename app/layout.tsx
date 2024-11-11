@@ -9,6 +9,7 @@ import {
 
 import { Inter } from 'next/font/google'
 import { ModalProvider } from '@/providers/modal-provider'
+import { ToasterProvider } from "@/providers/toast-provider";
 
 import "./globals.css";
 import prismadb from "@/lib/prismadb";
@@ -38,6 +39,7 @@ export default function RootLayout({
           </SignedOut>
           <SignedIn>
           </SignedIn>
+          <ToasterProvider />
           <ModalProvider />
           {children}
         </body>
